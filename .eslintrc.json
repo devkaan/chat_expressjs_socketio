@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": ["import", "eslint-comments"],
+  "rules": {
+    "import/newline-after-import": ["off"],
+    "global-require": "off",
+    "beforeLineComment": "off",
+    "linebreak-style": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "error",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "error",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "error",
+    "import/extensions": ["off", "ignorePackages"],
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "info", "error"]
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "./Public/libs/sweetalert2@11.js",
+    "./Public/libs/qs.min.js",
+    "./Public/libs/jquery-3.6.0.min.js",
+    "*/socket.io.js"
+  ]
+}
